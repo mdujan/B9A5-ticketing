@@ -13,8 +13,10 @@ function hideElementById(elementId) {
     element.classList.add('hidden')
 }
 
+const selectSeat = [];
 const seatPress = document.getElementsByClassName('seat');
 let selectedSeats = 0;
+
 
 for (let i = 0; i < seatPress.length; i++) {
 
@@ -39,6 +41,12 @@ for (let i = 0; i < seatPress.length; i++) {
             // price total add :-->
             const totalSum = document.getElementById('count-total');
             totalSum.innerText = Number(totalSum.innerText) + 550;
+            // grand total--->
+            // const grandSum = document.getElementById('grand');
+            // totalSum.innerText = Number(grandSum.innerText) + 550;
+            const grandSum = document.getElementById('grand');
+            grandSum.innerText = totalSum.innerText;
+            
             // append after setection:--->
             const priceList = document.getElementById('append-id');
             const td = document.createElement('td');
